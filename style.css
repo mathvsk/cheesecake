@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700&display=swap');
+
+@import './default.css';
+
+body, button {
+  font-family: 'Source Serif 4', serif;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  grid-template-columns: minmax(0,  19.9375rem);
+  grid-template-rows: repeat(2, max-content);
+  place-content: center;
+  gap: 2.12rem;
+
+  color: #A54328;
+  
+  padding: 3.31rem 2.31rem;
+
+  /* content-box => Ele leva em consideração o tamanho total do with, sem descontar o padding */
+  /* box-sizing: content-box; */
+
+  & button {
+    color: #fff;
+    font-size: 0.62rem;
+    font-weight: 500;
+    line-height: 1.06288rem; 
+    text-transform: capitalize;
+
+    padding: .7rem;
+    
+    background-color: #A54328;
+  }
+}
+
+.recipe-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2.92rem;
+
+  & h1 {
+    font-size: 1.77144rem;
+    font-weight: 700;
+  }
+
+  & img {
+    width: min(100%, 25.6875rem);
+  }
+
+  & p {
+    font-size: 0.88569rem;
+    font-weight: 400;
+  }
+}
+
+.preparation {
+  display: flex;
+  flex-direction: column;
+  gap: 2.12rem;
+}
+
+@media (min-width: 1440px) {
+  main {
+    box-sizing: border-box;
+    grid-template-columns: 435px 525px;
+    grid-template-rows: max-content;
+    gap: 11.81rem;
+
+    height: 100vh;
+  }
+}
